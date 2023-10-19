@@ -1,0 +1,8 @@
+/* general page styles import */
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/page/page.css);
+
+/* gallery grid section styles import */
+@import url(../blocks/gallery/gallery.css);
+@import url(../blocks/culture/culture.css);

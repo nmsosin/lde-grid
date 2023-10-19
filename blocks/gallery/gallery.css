@@ -1,0 +1,83 @@
+/* general gallery grid styles */
+.gallery {
+  max-width: 1280px;
+  max-height: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 36% 28.3% 17.7% 18%;
+  grid-template-rows: auto  26% 34%;
+  grid-auto-flow: dense;
+  grid-template-areas: 
+  "culture hat smile side"
+  "culture hat door empty"
+  "description coffee door silence";
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.gallery__image_left {
+  width: fit-content;
+}
+
+/* unique grid item styles */
+.gallery__card_culture {
+  padding: 125px 63px 48px 65px;
+  grid-area: culture;
+}
+
+.gallery__card_hat {
+  height: 100%;
+  grid-area: hat;
+}
+
+.gallery__card_smile {
+  grid-area: smile;
+}
+
+.gallery__card_side {
+  grid-area: side;
+}
+
+.gallery__card_description {
+  grid-area: description;
+  background-color: #828282;
+  color: #F2F2F2;
+  padding: 95px 48px 64px 65px;
+}
+
+.gallery__text {
+  font-weight: light;
+  font-size: 18px;
+  margin: 0;
+}
+
+.gallery__card_coffee {
+  height: 100%;
+  max-height: 100%;
+  grid-area: coffee;
+  background-color: #A6806B;
+}
+
+.gallery__card_door {
+  grid-area: door;
+}
+
+.gallery__card_red {
+  grid-area: empty;
+  background-color: #A61C1C;
+}
+
+.gallery__card_silence {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: silence;
+}
