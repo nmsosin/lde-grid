@@ -29,8 +29,56 @@
 
 /* unique grid item styles */
 .gallery__card_culture {
-  padding: 125px 63px 48px 65px;
+  padding: 125px 0 48px 0;
   grid-area: culture;
+}
+
+.gallery__culture-wrapper {
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+}
+
+.gallery__title {
+  max-width: 330px;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.gallery__contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-self: center;
+  align-self: end;
+}
+
+.gallery__contact {
+  height: 23px;
+}
+
+.gallery__contact_instagram {
+  width: 23px;
+  background-image: url(../../images/instagram.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gallery__contact_phone {
+  width: 23px;
+  background-image: url(../../images/phone.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gallery__contact_email {
+  width: 29px;
+  background-image: url(../../images/mail.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .gallery__card_hat {
@@ -80,4 +128,109 @@
   flex-direction: column;
   justify-content: flex-end;
   grid-area: silence;
+}
+
+
+/* additional media query for text items */
+@media (max-width: 1200px) {
+  .gallery__title {
+    max-width: 310px;
+    font-size: 60px;
+  }
+
+  .gallery__text {
+    font-size: 16px;
+  }
+}
+
+/* 992 breakpoint */
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: auto 22.8% 15.2% 18.5%;
+    grid-template-rows: 47% 20% 13% 20%;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "culture culture hat hat"
+    "description description coffee coffee"
+    "door smile empty side"
+    "door smile silence side";
+  }
+
+  .gallery__card_culture {
+    padding: 85px 0 34px 0;
+    grid-area: culture;
+    display: grid;
+    justify-content: center;
+  }
+
+  .gallery__title {
+    font-size: 55px;
+  }
+
+  .gallery__card_description {
+   padding: 55px 38px 34px 55px;
+  }
+}
+
+/* 768 breakpoint */
+@media (max-width: 768px) {
+  .gallery__card_culture {
+    padding: 85px 0 34px 0;
+    grid-area: culture;
+    display: grid;
+    justify-content: center;
+  }
+
+  .gallery__title {
+    max-width: 210px;
+    font-size: 40px;
+  }
+  
+    .gallery__contact {
+      height: 20px;
+    }
+
+  .gallery__card_description {
+   padding: 45px 35px 20px 35px;
+  }
+
+  .gallery__text {
+    font-size: 14px;
+  }
+}
+
+/* 320 ~ 500 breakpoint */
+@media (max-width: 500px) {
+  .gallery {
+    max-height: 1130px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 320px 3fr 20% 1fr 2fr;
+    grid-auto-flow: dense;
+    grid-template-areas: 
+    "culture culture culture"
+    "hat description smile"
+    "side coffee coffee"
+    "empty door door"
+    "silence door door";
+  }
+
+  .gallery__card_culture {
+    padding: 85px 0 34px 0;
+    grid-area: culture;
+    display: grid;
+    justify-content: center;
+  }
+
+  .gallery__title {
+    max-width: 210px;
+    font-size: 45px;
+  }
+
+  .gallery__text {
+    font-size: 12px;
+  }
+
+  .gallery__card_description {
+   padding: 40px 25px 20px 25px;
+  }
 }
