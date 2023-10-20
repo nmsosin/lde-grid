@@ -18,3 +18,7 @@
 *Желательные, но необязательные условия:*
 
 - Добавить в проект .stylelint и .editorconfig
+
+**Деплой**
+
+[Ссылка на gh-pages](https://nmsosin.github.io/lde-grid/)
